@@ -2,19 +2,19 @@
 
 Table of Contents
 
-- [Static Pages](#static-pages)
-  - [First React Code](#first-react-code)
-  - [React.createElement()](#reactcreateelement)
-  - [JSX](#jsx)
-  - [Why choose React?](#why-choose-react)
-    - [Composable](#composable)
-    - [Declarative](#declarative)
-  - [Components](#components)
-    - [Fragments](#fragments)
-    - [Parent/Child Component](#parentchild-component)
-    - [Styling with Classes](#styling-with-classes)
-  - [Component as Module](#component-as-module)
-- [Pop Quiz](#pop-quiz)
+-   [Static Pages](#static-pages)
+    -   [First React Code](#first-react-code)
+    -   [React.createElement()](#reactcreateelement)
+    -   [JSX](#jsx)
+    -   [Why choose React?](#why-choose-react)
+        -   [Composable](#composable)
+        -   [Declarative](#declarative)
+    -   [Components](#components)
+        -   [Fragments](#fragments)
+        -   [Parent/Child Component](#parentchild-component)
+        -   [Styling with Classes](#styling-with-classes)
+    -   [Component as Module](#component-as-module)
+-   [Pop Quiz](#pop-quiz)
 
 ## First React Code
 
@@ -285,3 +285,7 @@ import MyComponent from "./MyComponent";
 
     <details><summary>Answer</summary>The Header component should be called using angle brackets.</details>
     <br />
+
+---
+
+END
