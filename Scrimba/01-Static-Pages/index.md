@@ -12,7 +12,8 @@ Table of Contents
   - [Components](#components)
     - [Fragments](#fragments)
     - [Parent/Child Component](#parentchild-component)
-  - [Styling with Classes](#styling-with-classes)
+    - [Styling with Classes](#styling-with-classes)
+  - [Component as Module](#component-as-module)
 - [Pop Quiz](#pop-quiz)
 
 ## First React Code
@@ -176,11 +177,41 @@ function Page() {
 }
 ```
 
-## Styling with Classes
+### Styling with Classes
 
 JSX uses `className` to set class for styling a component.
 
 The reason for that is because the DOM uses `className` syntax and JSX accesses the native DOM properties under the hood.
+
+```jsx
+<nav>
+    <ul className="nav-list">
+        <li>Pricing</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+</nav>
+```
+
+## Component as Module
+
+It is pretty straightforward if you know how modules work in JavaScript.
+
+```jsx
+function MyComponent() {
+    return (
+        // ...
+    );
+}
+
+export default MyComponent;
+```
+
+And import it where you want to use the module.
+
+```jsx
+import MyComponent from "./MyComponent";
+```
 
 # Pop Quiz
 
