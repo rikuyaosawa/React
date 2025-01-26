@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Inter, sans-serif;
+}
+
+header {
+    background-color: #f55a5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+}
+
+header nav {
+    height: 24px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.fa-earth-americas {
+    margin-right: 7px;
+}
+
+header nav a span {
+    font-weight: 500;
+    font-size: 14px;
+}
