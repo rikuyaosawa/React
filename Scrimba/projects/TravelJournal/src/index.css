@@ -31,3 +31,56 @@ header nav a span {
     font-weight: 500;
     font-size: 14px;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    width: 470px;
+}
+
+article img {
+    width: 125px;
+    height: 168px;
+    border-radius: 5px;
+}
+
+article .content-container {
+    display: grid;
+    gap: 0.4rem;
+    margin-left: 1rem;
+    font-size: 0.7rem;
+}
+
+article .location {
+    display: flex;
+}
+
+article .fa-location-dot {
+    color: #f55a5a;
+    margin-right: 3px;
+}
+
+article .location-text {
+    text-transform: uppercase;
+    margin-right: 15px;
+    letter-spacing: 17%;
+}
+
+article .location a {
+    color: #918e9b;
+}
+
+article h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+}
+
+article .date {
+    font-weight: 700;
+}
