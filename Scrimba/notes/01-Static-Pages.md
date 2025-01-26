@@ -2,19 +2,19 @@
 
 Table of Contents
 
--   [Static Pages](#static-pages)
-    -   [First React Code](#first-react-code)
-    -   [React.createElement()](#reactcreateelement)
-    -   [JSX](#jsx)
-    -   [Why choose React?](#why-choose-react)
-        -   [Composable](#composable)
-        -   [Declarative](#declarative)
-    -   [Components](#components)
-        -   [Fragments](#fragments)
-        -   [Parent/Child Component](#parentchild-component)
-        -   [Styling with Classes](#styling-with-classes)
-    -   [Component as Module](#component-as-module)
--   [Pop Quiz](#pop-quiz)
+- [Static Pages](#static-pages)
+  - [First React Code](#first-react-code)
+  - [React.createElement()](#reactcreateelement)
+  - [JSX](#jsx)
+  - [Why choose React?](#why-choose-react)
+    - [Composable](#composable)
+    - [Declarative](#declarative)
+  - [Components](#components)
+    - [Fragments](#fragments)
+    - [Parent/Child Component](#parentchild-component)
+    - [Styling with Classes](#styling-with-classes)
+  - [Component as Module](#component-as-module)
+- [Pop Quiz](#pop-quiz)
 
 ## First React Code
 
@@ -31,7 +31,7 @@ HTML:
 
 ```html
 <body>
-    <div id="root"></div>
+  <div id="root"></div>
 </body>
 ```
 
@@ -82,11 +82,11 @@ root.render(reactElement);
 
 ## Why choose React?
 
--   Highest job demand
--   Largest ecosystem/community
--   Less "magic"
--   Composable/Declarative
--   Active development
+- Highest job demand
+- Largest ecosystem/community
+- Less "magic"
+- Composable/Declarative
+- Active development
 
 ### Composable
 
@@ -122,12 +122,12 @@ Example of function component:
 
 ```jsx
 function Page() {
-    return (
-        <ol>
-            <li>React is a popular library </li>
-            <li>I am more likely to get a job</li>
-        </ol>
-    );
+  return (
+    <ol>
+      <li>React is a popular library </li>
+      <li>I am more likely to get a job</li>
+    </ol>
+  );
 }
 
 root.render(<Page />);
@@ -143,10 +143,10 @@ You can import them or directly type in like the following:
 
 ```jsx
 return (
-    <React.Fragment>
-        <h1>Title</h1>
-        <p>This is a description.</p>
-    </React.Fragment>
+  <React.Fragment>
+    <h1>Title</h1>
+    <p>This is a description.</p>
+  </React.Fragment>
 );
 ```
 
@@ -154,10 +154,10 @@ But there is a shorter and cleaner syntax using empty angle brackets:
 
 ```jsx
 return (
-    <>
-        <h1>Title</h1>
-        <p>This is a description.</p>
-    </>
+  <>
+    <h1>Title</h1>
+    <p>This is a description.</p>
+  </>
 );
 ```
 
@@ -167,13 +167,13 @@ The function component `Page` is in this case the **"parent"** comnponent that h
 
 ```jsx
 function Page() {
-    return (
-        <>
-            <Header />
-            <Main />
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  );
 }
 ```
 
@@ -185,11 +185,11 @@ The reason for that is because the DOM uses `className` syntax and JSX accesses 
 
 ```jsx
 <nav>
-    <ul className="nav-list">
-        <li>Pricing</li>
-        <li>About</li>
-        <li>Contact</li>
-    </ul>
+  <ul className="nav-list">
+    <li>Pricing</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
 </nav>
 ```
 
@@ -233,10 +233,10 @@ import MyComponent from "./MyComponent";
 
     ```jsx
     root.render(
-        <section>
-            <h1>Hi there</h1>
-            <p>This is my website!</p>
-        </section>
+      <section>
+        <h1>Hi there</h1>
+        <p>This is my website!</p>
+      </section>
     );
     ```
 
@@ -262,7 +262,7 @@ import MyComponent from "./MyComponent";
 
     ```jsx
     function myComponent() {
-        return <small>I'm tiny text!</small>;
+      return <small>I'm tiny text!</small>;
     }
     ```
 
@@ -273,11 +273,11 @@ import MyComponent from "./MyComponent";
 
     ```jsx
     function Header() {
-        return (
-            <header>
-                <img src="./react-logo.png" width="40px" alt="React logo" />
-            </header>
-        );
+      return (
+        <header>
+          <img src="./react-logo.png" width="40px" alt="React logo" />
+        </header>
+      );
     }
 
     root.render(Header());
