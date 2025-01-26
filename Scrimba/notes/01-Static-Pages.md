@@ -233,10 +233,8 @@ import MyComponent from "./MyComponent";
 
     ```jsx
     root.render(
-      <section>
         <h1>Hi there</h1>
         <p>This is my website!</p>
-      </section>
     );
     ```
 
