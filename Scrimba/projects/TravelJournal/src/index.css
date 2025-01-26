@@ -9,6 +9,8 @@ body {
 header {
     background-color: #f55a5a;
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: center;
     align-items: center;
     height: 55px;
@@ -33,7 +35,8 @@ header nav a span {
 }
 
 main {
-    display: flex;
+    display: grid;
+    gap: 3rem;
     justify-content: center;
     padding: 3rem;
 }

@@ -1,11 +1,16 @@
 import Header from "./components/Header";
-import Entry from "./components/Entry";
+import EntryCard from "./components/EntryCard";
+import entries from "./entries";
 
 function App() {
     return (
         <>
             <Header />
-            <Entry />
+            <main>
+                <EntryCard {...entries[0]} />
+                <EntryCard {...entries[1]} />
+                <EntryCard {...entries[2]} />
+            </main>
         </>
     );
 }
