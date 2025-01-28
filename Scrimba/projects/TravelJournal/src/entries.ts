@@ -2,6 +2,7 @@ import type Entry from "./interfaces/Entry";
 
 const entries: Entry[] = [
     {
+        id: "123",
         img: {
             src: "https://scrimba.com/links/travel-journal-japan-image-url",
             alt: "mount fuji",
@@ -17,6 +18,7 @@ const entries: Entry[] = [
         about: "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.",
     },
     {
+        id: "456",
         img: {
             src: "https://scrimba.com/links/travel-journal-australia-image-url",
             alt: "australia",
@@ -32,6 +34,7 @@ const entries: Entry[] = [
         about: "The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the banks of the Sydney Harbour, it is often regarded as one of the 20th century's most famous and distinctive buildings.",
     },
     {
+        id: "789",
         img: {
             src: "https://scrimba.com/links/travel-journal-norway-image-url",
             alt: "norway",

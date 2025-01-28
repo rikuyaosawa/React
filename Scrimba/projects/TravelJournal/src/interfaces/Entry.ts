@@ -1,4 +1,5 @@
 interface Entry {
+    id: string;
     img: {
         src: string;
         alt: string;
