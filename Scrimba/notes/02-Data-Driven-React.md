@@ -6,6 +6,8 @@ Table of Contents
   - [Overview](#overview)
   - [JS Inside JSX](#js-inside-jsx)
   - [Passing Data Through Props](#passing-data-through-props)
+    - [Using `Array.prototype.map()`](#using-arrayprototypemap)
+    - [Key Props](#key-props)
 
 ## Overview
 
@@ -105,3 +107,43 @@ function Button({ label = "Click Me" }) {
   return <button>{label}</button>;
 }
 ```
+
+### Using `Array.prototype.map()`
+
+`Array.prototype.map()` is a method in JavaScript that is often used to transform arrays by applying a callback function to each element of the array and returning a new array with the results.
+
+In React, it can be used to **convert an array of raw data into an array of JSX elements that can be rendered on the page**.
+
+Example:
+
+```jsx
+const App = () => {
+  const data = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" },
+    { id: 3, name: "Charlie" },
+  ];
+
+  return (
+    <div>
+      {data.map((item) => (
+        <div key={item.id}>{item.name}</div>
+      ))}
+    </div>
+  );
+};
+
+export default App;
+```
+
+### Key Props
+
+Whenever you're rendering an array of React elements, each one must have a **unique key prop**.
+
+```jsx
+<li key="{item.id}">{item.value}</li>
+```
+
+This is because React uses the key to identify each element in the virtual DOM and efficiently update the UI when the array changes.
+
+> If you don't provide a key prop, React will fall back to **using the index of the element in the array** as the key. However, using the index as a key in such scenarios can lead to performance issues and subtle UI bugs (e.g., animations breaking, input fields losing focus).
