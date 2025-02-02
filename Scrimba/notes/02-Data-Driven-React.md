@@ -8,6 +8,7 @@ Table of Contents
   - [Passing Data Through Props](#passing-data-through-props)
     - [Using `Array.prototype.map()`](#using-arrayprototypemap)
     - [Key Props](#key-props)
+    - [Spread Object as Props](#spread-object-as-props)
 
 ## Overview
 
@@ -147,3 +148,11 @@ Whenever you're rendering an array of React elements, each one must have a **uni
 This is because React uses the key to identify each element in the virtual DOM and efficiently update the UI when the array changes.
 
 > If you don't provide a key prop, React will fall back to **using the index of the element in the array** as the key. However, using the index as a key in such scenarios can lead to performance issues and subtle UI bugs (e.g., animations breaking, input fields losing focus).
+
+### Spread Object as Props
+
+```jsx
+const entryElements = data.map((entry) => {
+  return <Entry key={entry.id} {...entry} />;
+});
+```
