@@ -1,7 +1,11 @@
-header {
+header,
+header nav a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+header {
     height: 100px;
     background-color: #ffffff;
     box-shadow: 0px 1px 2px 0px #0000000f, 0px 1px 3px 0px #0000001a;
@@ -10,9 +14,6 @@ header {
 header nav a {
     color: #141413;
     width: 226px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
 }
 
@@ -25,4 +26,42 @@ header h1 {
     margin-left: 10px;
     letter-spacing: -5%;
     font-weight: 400;
+}
+
+main {
+    padding: 4rem;
+}
+
+main form {
+    display: flex;
+    justify-content: center;
+}
+
+main form {
+    gap: 10px;
+}
+
+main form input {
+    width: 350px;
+    height: 38px;
+    padding: 9px 13px 9px 13px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0px 1px 2px 0px #0000000d;
+}
+
+main form button {
+    font-family: Inter, sans-serif;
+    width: 183px;
+    height: 38px;
+    padding: 9px 17px 9px 17px;
+    border-radius: 6px;
+    background: #141413;
+    box-shadow: 0px 1px 2px 0px #0000000d;
+    color: #ffffff;
+}
+
+main form button::before {
+    content: "+";
+    margin-right: 5px;
 }
