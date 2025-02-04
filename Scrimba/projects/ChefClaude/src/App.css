@@ -29,7 +29,10 @@ header h1 {
 }
 
 main {
-    padding: 4rem;
+    padding: 4rem 0;
+    margin: 0 auto;
+    width: 600px;
+    max-width: calc(100% - 50px);
 }
 
 main form {
@@ -38,11 +41,11 @@ main form {
 }
 
 main form {
-    gap: 10px;
+    gap: 5%;
 }
 
 main form input {
-    width: 350px;
+    width: 65%;
     height: 38px;
     padding: 9px 13px 9px 13px;
     border-radius: 6px;
@@ -52,16 +55,67 @@ main form input {
 
 main form button {
     font-family: Inter, sans-serif;
-    width: 183px;
+    color: #ffffff;
+    width: 30%;
     height: 38px;
     padding: 9px 17px 9px 17px;
     border-radius: 6px;
+    border-style: none;
     background: #141413;
     box-shadow: 0px 1px 2px 0px #0000000d;
-    color: #ffffff;
 }
 
 main form button::before {
     content: "+";
     margin-right: 5px;
+}
+
+main .ingredientList {
+    margin: 3rem 0;
+}
+
+main .ingredientList ul {
+    color: #475467;
+    font-size: 1.2rem;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+main .callout {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 110px;
+    opacity: 0px;
+    background-color: #f0efeb;
+    border-radius: 8px;
+    padding: 25px 45px;
+}
+
+main .callout .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 55px;
+}
+
+main .callout .content h3 {
+    font-weight: 500;
+}
+
+main .callout .content p {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+main .callout button {
+    font-family: Inter, sans-serif;
+    background-color: #d17557;
+    color: #ffffff;
+    width: 115px;
+    height: 38px;
+    padding: 9px 17px 9px 17px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0px #0000000d;
+    border-style: none;
 }
