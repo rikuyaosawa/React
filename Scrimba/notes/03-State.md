@@ -6,6 +6,7 @@ Table of Contents
   - [Overview](#overview)
   - [Responding to Events](#responding-to-events)
   - [`useState`](#usestate)
+  - [Pop Quiz](#pop-quiz)
 
 ## Overview
 
@@ -119,3 +120,37 @@ function handleClick() {
 By convention, it’s common to name the pending state argument for the first letter of the state variable name, like a for age. However, you may also call it like `prevAge` or something else that you find clearer.
 
 > <small>[Updating state based on the previous state ↗](https://react.dev/reference/react/useState#updating-state-based-on-the-previous-state)</small>
+
+## Pop Quiz
+
+1. You have 2 options for what you can pass in to a
+   state setter function (e.g. `setCount`). What are they?
+
+   <details><summary>Answer</summary>
+
+   1. Pass the new version of state that we want to use as the replacement for the old version of state.
+   2. Pass a callback function. Must return what we want the new value of state to be. Will receive the old version of state as a parameter so we can use it to help determine what we want the new value of state to be.
+
+   </details>
+   <br />
+
+2. When would you want to pass the first option (from answer
+   above) to the state setter function?
+
+   <details><summary>Answer</summary>
+
+   Whenever we don't really care about (or need) the old value, we simply want to set a new value.
+
+   </details>
+   <br />
+
+3. When would you want to pass the second option (from answer
+   above) to the state setter function?
+
+   <details><summary>Answer</summary>
+
+   Whenever we do care about the previous value in state and need
+   it to help us determine what the new value should be.
+
+   <details>
+   <br />
