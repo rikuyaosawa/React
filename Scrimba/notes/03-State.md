@@ -45,14 +45,14 @@ Functions passed to event handlers must be passed, not called.
 
 > <small>[More on React event object ↗](https://react.dev/reference/react-dom/components/common#react-event-object)</small>
 
-※ Using Event Object with TypeScript
-
-```tsx
-function log(event: React.FormEvent<HTMLFormElement>) {
-  event.preventDefault();
-  alert("Submitted");
-}
-```
+> [!TIP]Using Event Object with TypeScript
+>
+> ```tsx
+> function log(event: React.FormEvent<HTMLFormElement>) {
+>   event.preventDefault();
+>   alert("Submitted");
+> }
+> ```
 
 ## `useState`
 
@@ -92,7 +92,9 @@ Returns:
 
 `useState` is a Hook (more on Hooks later), so **you can only call it at the top level of your component or your own Hooks**. You can’t call it inside loops or conditions. If you need that, extract a new component and move the state into it.
 
-**Calling the set function does not change the current state in the already executing code.** It only affects what useState will return starting from the next render.
+> [!IMPORTANT]
+>
+> **Calling the set function does not change the current state in the already executing code.** It only affects what useState will return starting from the next render.
 
 Passing the next state directly:
 

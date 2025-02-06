@@ -283,7 +283,3 @@ import MyComponent from "./MyComponent";
 
     <details><summary>Answer</summary>The Header component should be called using angle brackets.</details>
     <br />
-
----
-
-END
