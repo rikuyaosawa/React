@@ -1,31 +1,37 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 function Main() {
-    const [ingredients, setIngredients] = useState(["Chicken", "Oregano", "Tomatoes"]);
+    const [ingredients, setIngredients] = useState<string[]>([]);
 
     const ingredientItems = ingredients.map((item) => {
         return <li key={item}>{item}</li>;
     });
 
-    function log(event: React.FormEvent<HTMLFormElement>) {
+    function updateIngredients(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
+
         const formData = new FormData(event.currentTarget);
-        const ingredient = formData.get("ingredient");
+        const ingredient = formData.get("ingredient") as string | null;
+
         if (ingredient !== null) {
-            ingredients.push(ingredient.toString());
-            setIngredients(ingredients);
+            const trimmed = ingredient.trim();
+            if (trimmed !== "") {
+                setIngredients((prev) => [...prev, trimmed]);
+            }
         }
+
         console.log(ingredients);
     }
 
     return (
         <main>
-            <form onSubmit={log}>
+            <form onSubmit={updateIngredients}>
                 <input
                     type="text"
                     placeholder="e.g. oregano"
                     aria-label="Add ingredients"
                     name="ingredient"
+                    required
                 />
                 <button type="submit">Add ingredient</button>
             </form>
