@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 
 function Main() {
     const [ingredients, setIngredients] = useState<string[]>([]);
@@ -7,10 +7,7 @@ function Main() {
         return <li key={item}>{item}</li>;
     });
 
-    function updateIngredients(event: FormEvent<HTMLFormElement>) {
-        event.preventDefault();
-
-        const formData = new FormData(event.currentTarget);
+    function updateIngredients(formData: FormData) {
         const ingredient = formData.get("ingredient") as string | null;
 
         if (ingredient !== null) {
@@ -19,19 +16,18 @@ function Main() {
                 setIngredients((prev) => [...prev, trimmed]);
             }
         }
-
-        console.log(ingredients);
     }
 
     return (
         <main>
-            <form onSubmit={updateIngredients}>
+            <form action={updateIngredients}>
                 <input
                     type="text"
                     placeholder="e.g. oregano"
                     aria-label="Add ingredients"
                     name="ingredient"
                     required
+                    autoFocus
                 />
                 <button type="submit">Add ingredient</button>
             </form>
