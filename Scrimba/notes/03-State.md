@@ -6,6 +6,7 @@ Table of Contents
   - [Overview](#overview)
   - [Responding to Events](#responding-to-events)
   - [`useState`](#usestate)
+  - [`<form>`](#form)
   - [Pop Quiz](#pop-quiz)
 
 ## Overview
@@ -120,6 +121,52 @@ function handleClick() {
 By convention, it’s common to name the pending state argument for the first letter of the state variable name, like a for age. However, you may also call it like `prevAge` or something else that you find clearer.
 
 > <small>[Updating state based on the previous state ↗](https://react.dev/reference/react/useState#updating-state-based-on-the-previous-state)</small>
+
+## `<form>`
+
+React 19 introduced `action` props for the form. It's a significant improvement for handling form submissions, especially in server-side rendering (SSR) environments and for progressive enhancement. Let's break down what it does and why it's important.
+
+**The Problem with Traditional Form Handling**
+
+Before React 19 and the `action` prop, handling form submissions in React often involved a few less-than-ideal approaches:
+
+1. **`onSubmit` Handler:** You'd typically use the `onSubmit` event handler on the `<form>` element. Inside this handler, you'd prevent the default form submission behavior (which would cause a full page reload) and then use JavaScript (e.g., `fetch` or `axios`) to send the form data to the server.
+
+2. **Server-Side Rendering Challenges:** In SSR, this approach can be problematic. The server might need to know the form's `action` URL _before_ the JavaScript hydrates on the client. This makes it harder to do things like prefetching data or optimizing server-side logic related to the form submission.
+
+3. **Progressive Enhancement:** If JavaScript is disabled or fails to load, the form wouldn't work at all. Traditional React form handling often relies entirely on JavaScript.
+
+**The Solution: The `action` Prop**
+
+The `action` prop on the `<form>` element solves these problems by allowing you to specify the form's submission URL directly in the HTML. This is a return to more traditional web form handling, but with the added benefits of React.
+
+**How it Works:**
+
+1. **HTML `action` Attribute:** The `action` prop is analogous to the `action` attribute in standard HTML forms. You set it to the URL where you want the form data to be submitted.
+
+2. **Enhanced SSR:** Because the `action` is available in the HTML, server-side rendering frameworks can use it to optimize the rendering process. They can prefetch data, pre-render related components, or perform other server-side actions related to the form submission.
+
+3. **Progressive Enhancement:** If JavaScript is disabled, the form will still submit to the URL specified in the `action` prop, just like a traditional HTML form. This provides a fallback and ensures that the form is still functional even without JavaScript.
+
+4. **React Integration:** When JavaScript _is_ enabled, you can still use the `onSubmit` handler for more complex form handling logic (e.g., validation, asynchronous submission, updating UI feedback). React's form handling complements the `action` prop, providing a more robust and flexible approach.
+
+**Example**
+
+```tsx
+export default function Search() {
+  // form data is directly passed instead of passing even object
+  function search(formData) {
+    const query = formData.get("query");
+    alert(`You searched for '${query}'`);
+  }
+  return (
+    <form action={search}>
+      <input name="query" />
+      <button type="submit">Search</button>
+    </form>
+  );
+}
+```
 
 ## Pop Quiz
 
