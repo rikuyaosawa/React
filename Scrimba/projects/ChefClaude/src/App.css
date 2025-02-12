@@ -74,6 +74,12 @@ main .ingredientList {
     margin: 3rem 0;
 }
 
+main .ingredientList p {
+    font-size: 0.7rem;
+    color: #ff0000;
+    margin-top: 0.5rem;
+}
+
 main .ingredientList ul {
     color: #475467;
     font-size: 1.2rem;
